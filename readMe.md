@@ -39,8 +39,8 @@ This application is built using HTML, CSS, and JavaScript for the frontend, with
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/rule-evaluator.git
-   cd rule-evaluator
+   git clone https://github.com/Akhilmak/Rule-Engine.git
+   cd rule-engine
    ```
 
 2. **Backend Setup**:
@@ -56,6 +56,18 @@ This application is built using HTML, CSS, and JavaScript for the frontend, with
       ```bash
       mvn spring-boot:run
       ```
+
+3. **Configure Database Connection**:
+
+In your application.properties file, configure the database connection:
+```text
+spring.datasource.url=jdbc:mysql://localhost:3306/zeotap
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+```
+Do not forget to create the database before starting the application.
 
 ### Accessing the Application
 
