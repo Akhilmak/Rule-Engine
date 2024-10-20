@@ -39,8 +39,8 @@ This application is built using HTML, CSS, and JavaScript for the frontend, with
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/rule-evaluator.git
-   cd rule-evaluator
+   git clone https://github.com/Akhilmak/Rule-Engine.git
+   cd rule-engine
    ```
 
 2. **Backend Setup**:
