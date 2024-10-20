@@ -59,14 +59,14 @@ This application is built using HTML, CSS, and JavaScript for the frontend, with
 
 3. **Configure Database Connection**:
 
-In your application.properties file, configure the database connection:
-```text
-spring.datasource.url=jdbc:mysql://localhost:3306/zeotap
-spring.datasource.username=your_username
-spring.datasource.password=your_password
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-```
+   - In your application.properties file, configure the database connection:
+    ```properties
+    spring.datasource.url=jdbc:mysql://localhost:3306/zeotap
+    spring.datasource.username=your_username
+    spring.datasource.password=your_password
+    spring.jpa.hibernate.ddl-auto=update
+    spring.jpa.show-sql=true
+    ```
 Do not forget to create the database before starting the application.
 
 ### Accessing the Application
