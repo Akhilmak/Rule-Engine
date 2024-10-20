@@ -2,11 +2,11 @@ package com.example.zeotap.rule_engine;
 
 
 public class Node {
-    String type;       // Type of node ("operator" or “condition”)
-    String value;      // Left operand for condition nodes
-    String operator;   // Operators like “AND”, “OR”, “>”, “<”, “=”
-    String rightValue; // Right-hand side value for conditions
-    Node left;        // Left child for binary operators
+    String type;
+    String value;
+    String operator;
+    String rightValue;
+    Node left;
 
     public String getType() {
         return type;
@@ -56,19 +56,17 @@ public class Node {
         this.right = right;
     }
 
-    Node right;       // Right child for binary operators
+    Node right;
 
-    // Constructor for operator nodes
     public Node(String type, String operator, Node left, Node right) {
         this.type = type;
         this.operator = operator;
         this.left = left;
         this.right = right;
-        this.value = null;      // No value for operator nodes
-        this.rightValue = null; // No rightValue for operator nodes
+        this.value = null;
+        this.rightValue = null;
     }
 
-    // Constructor for condition nodes
     public Node(String type, String value, String operator, String rightValue) {
         this.type = type;
         this.value = value;

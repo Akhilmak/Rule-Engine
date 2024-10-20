@@ -5,7 +5,7 @@ import java.util.Map;
 public class ASTEvaluator {
     public boolean evaluate(Node root, Map<String, Object> data) {
         if (root == null) {
-            return false; // Base case for null nodes
+            return false;
         }
 
         switch (root.type) {
@@ -19,9 +19,9 @@ public class ASTEvaluator {
     }
 
     private boolean evaluateCondition(Node conditionNode, Map<String, Object> data) {
-        String leftValue = conditionNode.value; // e.g., "age"
-        String operator = conditionNode.operator; // e.g., ">"
-        String rightValue = conditionNode.rightValue.replaceAll("'", ""); // Remove quotes for comparison
+        String leftValue = conditionNode.value;
+        String operator = conditionNode.operator;
+        String rightValue = conditionNode.rightValue.replaceAll("'", "");
 
         Object leftData = data.get(leftValue);
 
@@ -32,12 +32,11 @@ public class ASTEvaluator {
             return evaluateNumericCondition(leftNum, operator, rightNum);
         }
 
-        // Handle string comparisons
         if (leftData instanceof String) {
             return evaluateStringCondition((String) leftData, operator, rightValue);
         }
 
-        return false; // Default case if no conditions are met
+        return false;
     }
 
     private boolean evaluateNumericCondition(double leftNum, String operator, double rightNum) {
